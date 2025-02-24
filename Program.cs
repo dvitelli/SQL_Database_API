@@ -1,6 +1,5 @@
 ﻿using Utility.CreateDatabase;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Backend.Repositories;
 
@@ -14,21 +13,30 @@ namespace Database
             CreateDatabase database = new CreateDatabase();
             database.DatabaseCreation();
             
-            var builder = WebApplication.CreateBuilder();
+            var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllers();
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddOpenApi();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
-        
+            
             
             var app = builder.Build();
-            if(app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+            app.UseDeveloperExceptionPage();
+            // if(app.Environment.IsDevelopment())
+            // {
+                app.MapOpenApi("/openapi/v1.json");
+                app.UseSwaggerUI(options =>
+                  {
+                      options.SwaggerEndpoint("/openapi/v1.json", "Swagger Demo");
+                  });
+                
+            // }
             
+            app.UseHttpsRedirection();
+           
+            app.UseAuthorization();
             
+            app.MapControllers();
+            app.Run();
 
         }
     }

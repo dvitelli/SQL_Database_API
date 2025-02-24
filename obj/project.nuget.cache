@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Yibj9Gn4tNw=",
+  "dgSpecHash": "HL3wmtnmSwA=",
   "success": true,
   "projectFilePath": "C:\\Users\\domvi\\Database\\Backend\\main.csproj",
   "expectedPackageFiles": [
@@ -43,6 +43,7 @@
     "C:\\Users\\domvi\\.nuget\\packages\\microsoft.aspnetcore.mvc.razorpages\\2.3.0\\microsoft.aspnetcore.mvc.razorpages.2.3.0.nupkg.sha512",
     "C:\\Users\\domvi\\.nuget\\packages\\microsoft.aspnetcore.mvc.taghelpers\\2.3.0\\microsoft.aspnetcore.mvc.taghelpers.2.3.0.nupkg.sha512",
     "C:\\Users\\domvi\\.nuget\\packages\\microsoft.aspnetcore.mvc.viewfeatures\\2.3.0\\microsoft.aspnetcore.mvc.viewfeatures.2.3.0.nupkg.sha512",
+    "C:\\Users\\domvi\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
     "C:\\Users\\domvi\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.3.0\\microsoft.aspnetcore.razor.2.3.0.nupkg.sha512",
     "C:\\Users\\domvi\\.nuget\\packages\\microsoft.aspnetcore.razor.design\\2.3.0\\microsoft.aspnetcore.razor.design.2.3.0.nupkg.sha512",
     "C:\\Users\\domvi\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\2.3.0\\microsoft.aspnetcore.razor.language.2.3.0.nupkg.sha512",

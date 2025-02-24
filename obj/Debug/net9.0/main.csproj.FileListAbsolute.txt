@@ -72,3 +72,5 @@ c:\Users\domvi\Database\Backend\bin\Debug\net9.0\Swagger.Net.dll
 c:\Users\domvi\Database\Backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 c:\Users\domvi\Database\Backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 c:\Users\domvi\Database\Backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+c:\Users\domvi\Database\Backend\obj\Debug\net9.0\main.sourcelink.json
+C:\Users\domvi\Database\Backend\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll

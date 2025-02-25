@@ -4,18 +4,23 @@ using Backend.Models;
 
 namespace Backend.Controllers
 {
+    //base route
     [Route("api/[controller]")]
     [ApiController]
     
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
-
+        
+        //Initializes the _userRepository that all of the controller methods will use.
         public UserController(IUserRepository userRepository)
         {
             _userRepository = userRepository;
         }
         
+        /// <summary>
+        /// Base get call to api. Returns all users in database.
+        /// </summary>
         [HttpGet]
         public async Task<ActionResult<List<User>>> GetAllAsync()
         {
@@ -23,9 +28,11 @@ namespace Backend.Controllers
             return Ok(users);
         }
         
+           /// <summary>
+        /// Returns a user in database that matches the given id.
+        /// </summary>
+        /// <param name="id">UserId of User in Database</param>
         [HttpGet("{id}", Name = "GetById" )]
-        //[HttpGet]
-        //[Route]
         public async Task<ActionResult<User>> GetByIdAsync(int id)
         {
             var user = await _userRepository.GetByIdAsync(id);
@@ -36,6 +43,10 @@ namespace Backend.Controllers
             return Ok(user);
         }
         
+        /// <summary>
+        /// Adds a user to database.
+        /// </summary>
+        /// <param name="user">User to be added to database</param>
         [HttpPost]
         public async Task<ActionResult> AddAsync(User user)
         {
@@ -43,6 +54,10 @@ namespace Backend.Controllers
             return Ok();
         }
         
+        /// <summary>
+        /// Then updates user in database from new user based on ID.
+        /// </summary>
+        /// <param name="id", name="user">User Id and User that should be updated</param>
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdateAsync(int id, User user)
         {
@@ -55,6 +70,11 @@ namespace Backend.Controllers
             return NoContent();
             
         }
+        
+        /// <summary>
+        /// Deletes user in database from that matches Id.
+        /// </summary>
+        /// <param name="id">User ID</param>
         
         [HttpDelete]
         public async Task<ActionResult> DeleteAsync(int id)

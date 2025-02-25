@@ -13,7 +13,11 @@ namespace Backend.Repositories
         {
             _configuration = configuration;
         }
-
+        
+        /// <summary>
+        /// Inserts user into Database.
+        /// </summary>
+        /// <param name="user">User to be added</param>
         public async Task AddAsync(User user)
         {
             using var connection = GetConnection();
@@ -50,7 +54,11 @@ namespace Backend.Repositories
                 return user;
             }
         }
-
+        
+        /// <summary>
+        /// Updates user info in database to new user data.
+        /// </summary>
+        /// <param name="user">User that existing database user is updated to.</param>
         public async Task UpdateAsync(User user)
         {
             using var connection = GetConnection();
@@ -61,7 +69,10 @@ namespace Backend.Repositories
             + "WHERE UserId = @UserId", user);
             
         }
-
+        
+        /// <summary>
+        /// Gets connection from 
+        /// </summary>
         private SqlConnection GetConnection()
         {
             return new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));

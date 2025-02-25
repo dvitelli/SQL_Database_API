@@ -1,4 +1,3 @@
-using System.Configuration;
 using System.Data;
 using Backend.Models;
 using Dapper;

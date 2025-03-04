@@ -65,47 +65,8 @@ namespace Backend.Data
                  }
                  
                  dbConnection.Query(sql.Trim(','));
-                                  
-            
+                                    
         }
-        
-        // public async Task AddAsync(User user)
-        // {
-        //     IDbConnection dbConnection = new SqlConnection(_connectionString);
-        //     await dbconnection.
-        //             ExecuteAsync("INSERT INTO DatabaseSchema.UserData 
-        //                 + "(FirstName"
-        //                 + ",LastName"
-        //                 + ",StreetNumber"
-        //                 + ",StreetName"
-        //                 + ",City"
-        //                 + ",State"
-        //                 + ",Country"
-        //                 + ",PostCode"
-        //                 + ",Email"
-        //                 + ",DateOfBirth"
-        //                 + ",Age"
-        //                 + ",Phone"
-        //                 + ",SSN"
-        //                 + ",PictureThumbnail)"
-        //                 + "VALUES";") 
-        // }
-        
-        // public T LoadDataSingle<T>(string sql)
-        // {
-            
-        //     IDbConnection dbConnection = new SqlConnection(_connectionString);
-        //     return dbConnection.QuerySingle<T>(sql);
-            
-        // }
-        
-        // public bool ExecuteSql(string sql)
-        // {
-            
-        //     IDbConnection dbConnection = new SqlConnection(_connectionString);
-        //     return (dbConnection.Execute(sql) > 0);
-            
-        // }
         
         public T QuerySingle<T>(string sql)
         {

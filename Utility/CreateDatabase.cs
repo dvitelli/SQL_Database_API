@@ -8,8 +8,7 @@ namespace Utility.CreateDatabase
     /// Checks if user data exists in database, if it does not create database
     /// </summary>
     public class CreateDatabase{
-        
-        //private static string _connectionString = "Server=localhost;Database=UserDatabase;Trusted_Connection=True;TrustServerCertificate=true;";
+    
         
         public void DatabaseCreation()
         {

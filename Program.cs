@@ -17,24 +17,21 @@ namespace Database
             builder.Services.AddControllers();
             builder.Services.AddOpenApi();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
-            
-            
+                     
             var app = builder.Build();
             app.UseDeveloperExceptionPage();
-            // if(app.Environment.IsDevelopment())
-            // {
+            
+            #if DEBUG
                 app.MapOpenApi("/openapi/v1.json");
                 app.UseSwaggerUI(options =>
                   {
                       options.SwaggerEndpoint("/openapi/v1.json", "Swagger Demo");
                   });
-                
-            // }
+            #endif  
+             
             
             app.UseHttpsRedirection();
-           
             app.UseAuthorization();
-            
             app.MapControllers();
             app.Run();
 

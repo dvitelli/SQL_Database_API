@@ -21,12 +21,12 @@ namespace Backend.Repositories
         public async Task AddAsync(User user)
         {
             using var connection = GetConnection();
-            await connection.ExecuteAsync("INSERT INTO DatabaseSchema.UserData "
-                 + "(FirstName, LastName, StreetNumber, StreetName, City, State,"
-                 + "Country, PostCode, Email, DateOfBirth, Age, Phone, SSN, PictureThumbnail)"
-                 + "VALUES (@FirstName, @LastName, @StreetNumber, @StreetName," 
-                 + "@City, @State, @Country, @PostCode, @Email, @DateOfBirth, @Age, @PhoneNumber, "
-                 + "@SSN, @PictureThumbnail)", user); //use execute for add, update, delete
+            await connection.ExecuteAsync(@"INSERT INTO DatabaseSchema.UserData 
+                    (FirstName, LastName, StreetNumber, StreetName, City, State,
+                    Country, PostCode, Email, DateOfBirth, Age, Phone, SSN, PictureThumbnail)
+                    VALUES (@FirstName, @LastName, @StreetNumber, @StreetName,
+                    @City, @State, @Country, @PostCode, @Email, @DateOfBirth, @Age, @PhoneNumber, 
+                    @SSN, @PictureThumbnail)", user); //use execute for add, update, delete
             
         }
 

@@ -1,6 +1,6 @@
-SQL Database and API
+#SQL Database and API
 
-Description
+##Description
 My goal was to build out a SQL Database and API in C#. I used Dapper and Aspnet Core MVC.
 
 First I randomly generated User json data from randomuser.me.
@@ -27,3 +27,5 @@ SSNPictureThumbnail
 
 Then I built out an API that allows me to GET, POST, PUT, and DELETE.The get function allows me to GET all or GET a user by ID. 
 The POST function adds a user. The PUT function updated a user by first getting its ID.Lastly, the delete function takes in an ID and removes it.
+
+I am able to test my API with Swagger in browser.

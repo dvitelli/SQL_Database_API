@@ -1,6 +1,6 @@
-#SQL Database and API
+# SQL Database and API
 
-##Description
+## Description
 My goal was to build out a SQL Database and API in C#. I used Dapper and Aspnet Core MVC.
 
 First I randomly generated User json data from randomuser.me.

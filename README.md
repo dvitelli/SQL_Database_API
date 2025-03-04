@@ -26,7 +26,7 @@ Every user has these properties:
 - PictureThumbnail
 
 
-Then I built out an API that allows me to GET, POST, PUT, and DELETE.The get function allows me to GET all or GET a user by ID. 
-The POST function adds a user. The PUT function updated a user by first getting its ID.Lastly, the delete function takes in an ID and removes it.
+I built out an API that allows me to GET, POST, PUT, and DELETE. The get function allows me to GET all or GET a user by ID. 
+The POST function adds a user object to the database. The PUT function updates a user by based on its UserId. Lastly, the delete function takes in an ID and removes that user from the database.
 
-I am able to test my API with Swagger in browser.
+Notes: I am able to test my API with Swagger in browser.
